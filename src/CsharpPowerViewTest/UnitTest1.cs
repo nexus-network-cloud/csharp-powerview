@@ -10,7 +10,7 @@ namespace CsharpPowerViewTest
         [TestMethod]
         public async Task TestMethod1()
         {
-            IPowerViewAPIClient client = new PowerViewAPIClient(IPAddress.Parse("192.168.255.110"));
+            IPowerViewApiClient client = new PowerViewAPIClient(IPAddress.Parse("192.168.255.110"));
 
             var shades = await client.GetAllShadesAsync();
             //var result = await client.ActivatePowerViewSceneAsync(46143);

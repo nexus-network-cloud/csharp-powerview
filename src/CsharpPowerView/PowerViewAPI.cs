@@ -5,15 +5,16 @@ using System.Text;
 
 namespace NexusNetworkCloud.CsharpPowerview
 {
-    public interface IPowerViewAPIClient
+    public interface IPowerViewApiClient
     {
         Task<List<PowerViewShade>?> GetAllShadesAsync();
         Task<PowerViewShade?> GetShadeAsync(int shadeID);
         Task<bool> ActivatePowerViewSceneAsync(int sceneID);
         Task<bool> SetShadePositionAsync(int shadeID, ShadePosition position);
+        Task<bool> SetShadePositionAsync(int shadeID, PowerViewShadePosition position);
     }
 
-    public class PowerViewAPIClient : IPowerViewAPIClient, IDisposable
+    public class PowerViewAPIClient : IPowerViewApiClient, IDisposable
     {
         private readonly IPAddress _powerViewAddress;
         private readonly HttpClient _httpClient;
@@ -22,6 +23,12 @@ namespace NexusNetworkCloud.CsharpPowerview
         {
             _powerViewAddress = powerViewAddress;
             _httpClient = new();
+        }
+
+        public PowerViewAPIClient(IPAddress powerViewAddress, HttpClient httpClient)
+        {
+            _powerViewAddress = powerViewAddress;
+            _httpClient = httpClient;
         }
 
         public async Task<List<PowerViewShade>?> GetAllShadesAsync()
@@ -73,12 +80,6 @@ namespace NexusNetworkCloud.CsharpPowerview
         }
 
         public void Dispose()
-        {
-            Dispose(disposing: true);
-            GC.SuppressFinalize(this);
-        }
-
-        public virtual void Dispose(bool disposing)
         {
             _httpClient.Dispose();
         }
