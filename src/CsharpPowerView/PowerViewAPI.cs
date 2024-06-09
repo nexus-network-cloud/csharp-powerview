@@ -70,6 +70,11 @@ namespace NexusNetworkCloud.CsharpPowerview
 
         public async Task<bool> SetShadePositionAsync(int shadeID, PowerViewShadePosition position)
         {
+            if (position.PositionOne < 0 || position.PositionOne > 65535)
+                return false; // Has to be between those two values
+            else if (position.PositionTwo < 0 || position.PositionTwo > 65535)
+                return false;
+
             JObject positionData = JObject.FromObject(position);
 
             JObject positionsData = new JObject { { "positions", positionData } };
