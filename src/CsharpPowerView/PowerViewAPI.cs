@@ -14,18 +14,18 @@ namespace NexusNetworkCloud.CsharpPowerview
         Task<bool> SetShadePositionAsync(int shadeID, PowerViewShadePosition position);
     }
 
-    public class PowerViewAPIClient : IPowerViewApiClient, IDisposable
+    public class PowerViewApiClient : IPowerViewApiClient, IDisposable
     {
         private readonly IPAddress _powerViewAddress;
         private readonly HttpClient _httpClient;
 
-        public PowerViewAPIClient(IPAddress powerViewAddress)
+        public PowerViewApiClient(IPAddress powerViewAddress)
         {
             _powerViewAddress = powerViewAddress;
             _httpClient = new();
         }
 
-        public PowerViewAPIClient(IPAddress powerViewAddress, HttpClient httpClient)
+        public PowerViewApiClient(IPAddress powerViewAddress, HttpClient httpClient)
         {
             _powerViewAddress = powerViewAddress;
             _httpClient = httpClient;
