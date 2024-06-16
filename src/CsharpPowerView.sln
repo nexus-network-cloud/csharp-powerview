@@ -5,7 +5,7 @@ VisualStudioVersion = 17.2.32519.379
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CsharpPowerView", "CsharpPowerview\CsharpPowerView.csproj", "{9F054140-6388-4C73-AF6B-640B7BE4BA8F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CsharpPowerViewTest", "CsharpPowerViewTest\CsharpPowerViewTest.csproj", "{43CAA22D-6EC8-4C86-BF86-592FB60CFBBE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CsharpPowerViewTest", "CsharpPowerViewTest\CsharpPowerViewTest.csproj", "{4A087CF5-F8A5-4719-BC58-F6FE52FF9BAB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{9F054140-6388-4C73-AF6B-640B7BE4BA8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F054140-6388-4C73-AF6B-640B7BE4BA8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9F054140-6388-4C73-AF6B-640B7BE4BA8F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{43CAA22D-6EC8-4C86-BF86-592FB60CFBBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{43CAA22D-6EC8-4C86-BF86-592FB60CFBBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{43CAA22D-6EC8-4C86-BF86-592FB60CFBBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{43CAA22D-6EC8-4C86-BF86-592FB60CFBBE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A087CF5-F8A5-4719-BC58-F6FE52FF9BAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A087CF5-F8A5-4719-BC58-F6FE52FF9BAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A087CF5-F8A5-4719-BC58-F6FE52FF9BAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A087CF5-F8A5-4719-BC58-F6FE52FF9BAB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
